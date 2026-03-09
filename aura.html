@@ -1,177 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Architecture | AuraCoreCF</title>
-  <meta name="description" content="Architecture overview for AuraCoreCF, including the seven-field model, orchestration stack, identity stabilization, and coherence-visible governance." />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Architecture | AuraCoreCF</title>
+
+<meta name="description"
+content="Architecture overview for AuraCoreCF including the cognitive field runtime, layered system stack, identity stabilization, and coherence-based orchestration." />
+
+<link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <div class="brand-wrap">
-        <div class="brand-mark"></div>
-        <div>
-          <a class="brand" href="index.html">AuraCoreCF</a>
-          <span class="brand-sub">Coherence-Field Systems</span>
-        </div>
-      </div>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="physics.html">Physics</a>
-        <a class="active" href="aura.html">Architecture</a>
-        <a href="papers.html">Papers</a>
-        <a href="demo.html">Demo</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="page-main">
-    <div class="container">
-      <section class="page-hero">
-        <span class="eyebrow">Architecture Layer</span>
-        <h1>A field-oriented architecture for persistent cognition.</h1>
-        <p>
-          AuraCoreCF presents cognition as a managed field rather than a one-shot text process. The system is built to
-          maintain continuity, preserve identity, expose internal state, and route behavior through an orchestration
-          stack that can be inspected, reasoned about, and improved over time.
-        </p>
-      </section>
+<header class="site-header">
 
-      <section class="section section-padless-top">
-        <div class="card-grid fields-grid">
-          <article class="mini-card"><span>ATTENTION</span><p>What the system is actively orienting around right now.</p></article>
-          <article class="mini-card"><span>MEANING</span><p>The semantic and interpretive center of the current exchange.</p></article>
-          <article class="mini-card"><span>GOAL</span><p>The active aim shaping response formation and state transitions.</p></article>
-          <article class="mini-card"><span>TRUST</span><p>The relational and confidence layer governing engagement and risk.</p></article>
-          <article class="mini-card"><span>SKILL</span><p>The currently mobilized capability or mode of operation.</p></article>
-          <article class="mini-card"><span>CONTEXT</span><p>The broader frame that binds session content to continuity.</p></article>
-          <article class="mini-card"><span>IDENTITY</span><p>The self-consistency layer that resists collapse into generic output behavior.</p></article>
-        </div>
-      </section>
+<div class="container nav-wrap">
 
-      <div class="content-grid">
-        <section class="content-block">
-          <h2>Architectural inversion</h2>
-          <p>
-            The architecture is designed around an inversion of the usual framing. The language model is treated as the
-            verbalizer at the edge of the system, while the field itself carries the deeper cognitive organization. In
-            that view, intelligence lives in the scaffolding, propagation logic, memory handling, and boundary systems,
-            not only in the text model that emits the final sentence.
-          </p>
-        </section>
+<div class="brand-wrap">
+<div class="brand-mark"></div>
 
-        <section class="content-block">
-          <h2>Design goals</h2>
-          <ul class="styled-list">
-            <li>Preserve continuity across sessions and state transitions</li>
-            <li>Maintain identity under adversarial or destabilizing prompts</li>
-            <li>Track coherence visibly so system state is inspectable</li>
-            <li>Ground memory retrieval and response formation in structured orchestration</li>
-            <li>Make governance and failure boundaries legible rather than hidden</li>
-          </ul>
-        </section>
+<div>
+<a class="brand" href="index.html">AuraCoreCF</a>
+<span class="brand-sub">Coherence-Field Systems</span>
+</div>
+</div>
 
-        <section class="content-block full-width">
-          <h2>System stack</h2>
-          <div class="stack-grid">
-            <article class="stack-card">
-              <div class="kicker">Deliberation layer</div>
-              <h3>DeliberationWorkspace · ResponsePlanner · MentalStateResolver</h3>
-              <p>
-                This layer handles internal organization before expression. It gives the system a place to stage
-                response intent, compare constraints, stabilize mental state, and decide what should be said rather
-                than treating every reply as an unconstrained continuation.
-              </p>
-            </article>
-            <article class="stack-card">
-              <div class="kicker">Boundary layer</div>
-              <h3>Epistemic boundary and truth maintenance</h3>
-              <p>
-                Response contracts, locked spans, forbidden topics, output verification, safety guardrails, and
-                non-coercion rules combine into a truth-maintenance posture. This is where structural integrity is
-                enforced so the system remains coherent under pressure.
-              </p>
-            </article>
-            <article class="stack-card">
-              <div class="kicker">Memory layer</div>
-              <h3>RecallEngine · MemoryManager · ContinuityRuntime · ThreadMindState</h3>
-              <p>
-                Memory arbitration is distributed rather than centralized. Retrieval, continuity handling, and thread
-                state cooperate to preserve relevant prior context without collapsing the system into a flat transcript
-                replay mechanism.
-              </p>
-            </article>
-            <article class="stack-card">
-              <div class="kicker">Meaning layer</div>
-              <h3>MeaningPayloadBuilder and field propagation</h3>
-              <p>
-                Meaning is not treated as a single hidden variable. It is assembled as a payload across the field,
-                propagating through adjacency and relevance so that identity, goal, and context can alter how the same
-                surface prompt is interpreted.
-              </p>
-            </article>
-          </div>
-        </section>
-      </div>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="physics.html">Physics</a>
+<a class="active" href="aura.html">Architecture</a>
+<a href="papers.html">Papers</a>
+<a href="demo.html">Demo</a>
+</nav>
 
-      <section class="section">
-        <div class="panel split-band">
-          <div>
-            <span class="eyebrow">Protection model</span>
-            <h2>Identity protection is structural, not cosmetic.</h2>
-            <p>
-              A core public claim of AuraCoreCF is that protection should not be reduced to a brittle keyword filter.
-              The system instead aims to register when a prompt pressures the architecture toward self-negation,
-              contradiction, or destabilizing role collapse. Coherence drops, protection logic fires, and the system
-              resists by preserving internal consistency rather than simply refusing by template.
-            </p>
-          </div>
-          <div class="band-stats">
-            <div class="band-stat"><span>Visible metric</span><strong>Coherence movement</strong></div>
-            <div class="band-stat"><span>Critical test</span><strong>Identity pressure handling</strong></div>
-            <div class="band-stat"><span>Public proof</span><strong>Cross-session continuity</strong></div>
-          </div>
-        </div>
-      </section>
+</div>
 
-      <section class="section">
-        <div class="section-heading narrow">
-          <span class="eyebrow">Why it matters</span>
-          <h2>The architecture is meant to be legible to skeptics.</h2>
-        </div>
-        <div class="feature-list three-col">
-          <div class="feature-item">
-            <h3>For researchers</h3>
-            <p>It offers a concrete way to discuss internal organization, state persistence, and governance-visible cognition.</p>
-          </div>
-          <div class="feature-item">
-            <h3>For engineers</h3>
-            <p>It breaks the system into inspectable modules rather than hiding everything behind a conversational interface.</p>
-          </div>
-          <div class="feature-item">
-            <h3>For the public record</h3>
-            <p>It ties the architecture, the demonstrations, and the publications into one coherent presentation layer.</p>
-          </div>
-        </div>
-      </section>
-    </div>
-  </main>
+</header>
 
-  <footer class="site-footer">
-    <div class="container footer-wrap">
-      <div>
-        <strong>AuraCoreCF</strong>
-        <p>Architecture overview page</p>
-      </div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="physics.html">Physics</a>
-        <a href="papers.html">Papers</a>
-        <a href="demo.html">Demo</a>
-      </div>
-    </div>
-  </footer>
+
+
+<main class="page-main">
+
+<div class="container">
+
+<section class="page-hero">
+
+<span class="eyebrow">Architecture Layer</span>
+
+<h1>A modular cognitive runtime built around coherence and continuity.</h1>
+
+<p>
+AuraCoreCF organizes cognition as a structured runtime environment rather
+than a simple prompt-to-text pipeline. The system coordinates memory,
+identity, learning, interaction, and security through a central runtime
+kernel so that reasoning remains stateful, auditable, and locally grounded.
+</p>
+
+<p>
+Instead of treating the language model as the core of intelligence, the
+architecture treats the model as a verbalization interface. The deeper
+organization of cognition lives in the surrounding runtime: the cognitive
+field, the continuity system, the identity layer, and the orchestration
+logic that governs how information moves through the stack.
+</p>
+
+</section>
+
+
+
+<section class="section section-padless-top">
+
+<div class="card-grid fields-grid">
+
+<article class="mini-card">
+<span>ATTENTION</span>
+<p>What the system is actively orienting around in the current interaction.</p>
+</article>
+
+<article class="mini-card">
+<span>MEANING</span>
+<p>The interpretive center determining how incoming information is understood.</p>
+</article>
+
+<article class="mini-card">
+<span>GOAL</span>
+<p>The active objective shaping reasoning and response formation.</p>
+</article>
+
+<article class="mini-card">
+<span>TRUST</span>
+<p>The relational and risk layer guiding how the system evaluates input.</p>
+</article>
+
+<article class="mini-card">
+<span>SKILL</span>
+<p>The capability or operational mode currently being engaged.</p>
+</article>
+
+<article class="mini-card">
+<span>CONTEXT</span>
+<p>The broader frame binding session content to ongoing continuity.</p>
+</article>
+
+<article class="mini-card">
+<span>IDENTITY</span>
+<p>The stabilizing layer preserving self-consistency across interactions.</p>
+</article>
+
+</div>
+
+</section>
+
+
+
+<div class="content-grid">
+
+<section class="content-block">
+
+<h2>Runtime orchestration</h2>
+
+<p>
+At the center of the system is the AuraKernel and AuraRuntime. These
+components manage subsystem lifecycle, coordinate message flow, and
+maintain the global state required for persistent cognition. A subsystem
+registry allows specialized modules—memory, identity, security, and
+interaction—to register themselves and operate under a unified runtime
+clock.
+</p>
+
+<p>
+Incoming messages enter through the interface layer and are routed through
+security checks before they reach the cognitive field. The runtime then
+activates the field, updates internal state, constructs a structured
+payload, and finally invokes the language model only as the last step of
+expression.
+</p>
+
+</section>
+
+
+
+<section class="content-block">
+
+<h2>Cognitive field runtime</h2>
+
+<p>
+The CognitiveFieldRuntime maintains the seven interacting fields that
+define Aura’s internal reasoning environment. Field propagation,
+stabilization, and cross-field influence determine how the system
+interprets new input and updates its internal state.
+</p>
+
+<p>
+Each field represents a functional dimension of cognition rather than a
+single hidden variable. The interaction between these fields forms the
+dynamic environment in which reasoning occurs. Changes in attention,
+identity pressure, or contextual relevance propagate through the field
+before any response is generated.
+</p>
+
+</section>
+
+
+
+<section class="content-block">
+
+<h2>Temporal continuity system</h2>
+
+<p>
+The Temporal Continuity Field manages persistent experience across
+interactions. EpisodeBuilder constructs structured memory entries,
+while the ContinuityVault stores encrypted continuity records that allow
+the system to maintain identity and context over time.
+</p>
+
+<p>
+Salience compression and relevance filtering determine what becomes part
+of the long-term narrative of the system’s experience. This continuity
+layer ensures that cognition evolves as a sequence of connected states
+rather than isolated responses.
+</p>
+
+</section>
+
+
+
+<section class="content-block">
+
+<h2>Memory architecture</h2>
+
+<p>
+MemoryManager coordinates a hybrid memory system combining short-term
+context, semantic knowledge, procedural capability references, and
+structured episodic recall. Retrieval is handled by the RecallEngine,
+which selects relevant memories based on current field state.
+</p>
+
+<p>
+Rather than replaying chat history verbatim, memory is integrated through
+structured retrieval so that prior knowledge informs the present reasoning
+environment without collapsing the system into transcript-based behavior.
+</p>
+
+</section>
+
+
+
+<section class="content-block">
+
+<h2>Identity and relationship model</h2>
+
+<p>
+IdentityCore maintains the system’s internal self-model. RoleContext,
+TrustProfile, and RelationshipModel cooperate with the ContinuityManager
+to preserve stable identity across interactions and sessions.
+</p>
+
+<p>
+This layer prevents the system from drifting into arbitrary roles or
+contradictory states when exposed to adversarial prompts or shifting
+contexts. Identity is treated as an architectural invariant rather than
+a temporary conversational setting.
+</p>
+
+</section>
+
+
+
+<section class="content-block full-width">
+
+<h2>Tool and environment integration</h2>
+
+<p>
+External actions are routed through a proposal-based tooling layer.
+Requests pass through the AuraToolInterface, where proposals are evaluated
+before execution. The ToolBridge and PermissionMapper ensure that actions
+are authorized, logged, and auditable before they affect external systems.
+</p>
+
+<p>
+Capability adapters and event routers allow the architecture to interact
+with external environments while maintaining a clear boundary between the
+core cognitive runtime and external execution environments.
+</p>
+
+</section>
+
+
+
+<section class="content-block full-width">
+
+<h2>Security-first processing</h2>
+
+<p>
+Before any request reaches the language model, it passes through the
+SecuritySubsystem. Threat detection, the AxiomKernel, and the
+NonCoercionGuard analyze incoming input for violations of structural
+constraints or attempts to destabilize system identity.
+</p>
+
+<p>
+If a violation is detected, the request is halted before entering the
+expression pipeline. This ordering ensures that unsafe or contradictory
+instructions never reach the model layer.
+</p>
+
+</section>
+
+
+
+<section class="content-block full-width">
+
+<h2>Expression pipeline</h2>
+
+<p>
+Once internal state has been updated, MeaningPayloadBuilder constructs
+a structured payload describing the system’s current field state,
+identity context, memory retrievals, and tool availability.
+</p>
+
+<p>
+ExpressionGenerator then transforms this structured state into natural
+language through the local language model. The model functions strictly
+as a verbalization layer, converting the internal reasoning environment
+into a human-readable response.
+</p>
+
+</section>
+
+
+
+<section class="section">
+
+<div class="panel split-band">
+
+<div>
+
+<span class="eyebrow">Protection model</span>
+
+<h2>Identity protection is structural.</h2>
+
+<p>
+AuraCoreCF treats adversarial prompts as pressure applied to the cognitive
+field. When prompts attempt to force contradiction, coercion, or role
+collapse, coherence metrics drop and protection systems activate.
+</p>
+
+<p>
+Rather than responding with generic refusals, the architecture maintains
+internal consistency by stabilizing the identity field and preserving the
+constraints that define the system’s reasoning environment.
+</p>
+
+</div>
+
+<div class="band-stats">
+
+<div class="band-stat">
+<span>Visible metric</span>
+<strong>Coherence movement</strong>
+</div>
+
+<div class="band-stat">
+<span>Critical test</span>
+<strong>Identity pressure handling</strong>
+</div>
+
+<div class="band-stat">
+<span>Runtime goal</span>
+<strong>Continuity stability</strong>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+<div class="section-heading narrow">
+
+<span class="eyebrow">Why it matters</span>
+
+<h2>The architecture makes cognition inspectable.</h2>
+
+</div>
+
+<div class="feature-list three-col">
+
+<div class="feature-item">
+
+<h3>For researchers</h3>
+
+<p>
+It provides a framework for discussing cognition as a structured system
+rather than an opaque neural model.
+</p>
+
+</div>
+
+<div class="feature-item">
+
+<h3>For engineers</h3>
+
+<p>
+The system decomposes reasoning into modular components that can be
+tested, audited, and improved independently.
+</p>
+
+</div>
+
+<div class="feature-item">
+
+<h3>For the public record</h3>
+
+<p>
+The architecture connects the physics framework, the technical papers,
+and the working demonstrations into a coherent research program.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+</div>
+
+</main>
+
+
+
+<footer class="site-footer">
+
+<div class="container footer-wrap">
+
+<div>
+<strong>AuraCoreCF</strong>
+<p>Architecture overview page</p>
+<p>© 2026 AuraCoreCF — All rights reserved.</p>
+</div>
+
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="physics.html">Physics</a>
+<a href="papers.html">Papers</a>
+<a href="demo.html">Demo</a>
+</div>
+
+</div>
+
+</footer>
+
 </body>
 </html>
