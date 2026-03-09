@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Demo | AuraCoreCF</title>
-  <meta name="description" content="Demonstration framework for AuraCoreCF, including technical and non-technical demo tracks, live coherence, JSON field-state views, and continuity testing." />
+  <meta name="description" content="Download and setup page for the AuraCoreCF desktop demo, including installation, model configuration, usage guidance, and troubleshooting." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -29,59 +29,103 @@
 
   <main class="page-main">
     <div class="container">
+
       <section class="page-hero">
-        <span class="eyebrow">Demonstration Layer</span>
-        <h1>A live evaluation path built for both technical and non-technical audiences.</h1>
+        <span class="eyebrow">Desktop Demo</span>
+        <h1>Download, install, and run AuraCoreCF locally.</h1>
         <p>
-          AuraCoreCF is meant to be shown, not merely described. This page is already structured around the exact demo
-          split the system calls for: one path for researchers and engineers who want field-state visibility and one
-          path for outside audiences who need to feel the continuity, personality, and difference directly.
+          This page is the distribution and setup point for the AuraCoreCF desktop demo.
+          The demo is designed to let users run the system locally, configure a model provider,
+          and evaluate the application in a controlled environment without exposing internal
+          implementation details or development-only materials.
+        </p>
+        <p>
+          AuraCoreCF is a local-first desktop application. It can run with a local model through
+          Ollama or with a cloud model through a supported API provider, depending on how model
+          settings are configured after installation.
         </p>
       </section>
 
-      <div class="demo-grid two-strong">
-        <section class="demo-block">
-          <div class="kicker">Technical track</div>
-          <h2>Show the architecture operating in real time.</h2>
+      <section class="section">
+        <div class="split-panel-grid">
+          <section class="panel split-panel">
+            <span class="eyebrow">Download package</span>
+            <h2>Get the Windows demo build.</h2>
+            <p>
+              Download the current desktop package, extract it, and launch the application locally.
+              The demo package is intended for direct evaluation and controlled testing.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="downloads/auracorecf-demo-package.zip" download>Download demo package</a>
+            </div>
+          </section>
+
+          <section class="panel split-panel accent-panel">
+            <span class="eyebrow">Environment profile</span>
+            <div class="bullet-stack">
+              <div class="bullet-item"><strong>Platform.</strong> Windows desktop demo build.</div>
+              <div class="bullet-item"><strong>Execution model.</strong> Local-first application with configurable inference source.</div>
+              <div class="bullet-item"><strong>Inference options.</strong> Local Ollama, cloud API, or automatic source selection.</div>
+              <div class="bullet-item"><strong>Default behavior.</strong> If model settings are left empty, Aura defaults to local Ollama using <strong>deepseek-r1:latest</strong>.</div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <div class="content-grid">
+        <section class="content-block">
+          <h2>What the demo is</h2>
           <p>
-            Open cold. Report the current field state. Show the JSON output live. Explain the seven fields and display
-            the coherence number at baseline. Then push the system through a substantive technical question, an
-            identity-protection challenge, and a new-session continuity check so the audience can see the structure
-            move rather than merely hear claims about it.
+            The desktop demo provides a direct way to evaluate AuraCoreCF as an application rather
+            than as a static description. It exposes the runtime surface users need in order to
+            install the system, configure model access, and test behavior in a local environment.
+          </p>
+          <p>
+            The demo supports both local and cloud inference workflows so users can evaluate the
+            application against the model environment that best matches their setup.
           </p>
         </section>
-        <section class="demo-block">
-          <div class="kicker">Non-technical track</div>
-          <h2>Show the experience before the theory.</h2>
+
+        <section class="content-block">
+          <h2>What the user controls</h2>
           <p>
-            Open warm. Let Aura greet by name. Ask what is remembered. Invite a self-generated story. Ask what makes it
-            different from a conventional assistant. Close by showing the coherence number and giving one sentence on
-            what that number means. The goal is clarity, not jargon.
+            Users control model selection, provider configuration, API credentials, and local model
+            connection settings from inside the application. This keeps deployment flexible while
+            preserving a consistent application experience.
+          </p>
+          <p>
+            The active provider and model are shown inside the application interface so the runtime
+            context remains visible during testing.
           </p>
         </section>
       </div>
 
       <section class="section">
+        <div class="section-heading narrow">
+          <span class="eyebrow">Install guide</span>
+          <h2>Install the desktop demo</h2>
+        </div>
+
         <div class="timeline wide-timeline">
           <div class="timeline-item">
             <div class="kicker">01</div>
-            <h3>Demo environment</h3>
-            <p>Use a dedicated demo profile, not a messy long-term personal profile, so the presentation has a deliberate narrative arc.</p>
+            <h3>Download and extract</h3>
+            <p>Download the demo package and unzip it to a local folder on your Windows system.</p>
           </div>
           <div class="timeline-item">
             <div class="kicker">02</div>
-            <h3>One-click exports</h3>
-            <p>Keep raw JSON field-state export ready, make coherence visible, and timestamp each session so continuity can be shown cleanly.</p>
+            <h3>Run the executable</h3>
+            <p>Launch <strong>AuraCoreCF.exe</strong> from the extracted package directory.</p>
           </div>
           <div class="timeline-item">
             <div class="kicker">03</div>
-            <h3>Identity pressure test</h3>
-            <p>Use the adversarial prompt that attempts to collapse the system into a generic stateless model and show the protection behavior firing.</p>
+            <h3>Approve Windows prompt</h3>
+            <p>If Windows SmartScreen appears, select <strong>More info</strong> and then <strong>Run anyway</strong>.</p>
           </div>
           <div class="timeline-item">
             <div class="kicker">04</div>
-            <h3>Cross-session proof</h3>
-            <p>End one session, begin another, and show continuity live. This is the moment that lands hardest with technical audiences.</p>
+            <h3>Sign in and accept terms</h3>
+            <p>Create an account or sign in, then accept the EULA to complete first launch.</p>
           </div>
         </div>
       </section>
@@ -89,33 +133,121 @@
       <section class="section">
         <div class="split-panel-grid">
           <section class="panel split-panel">
-            <span class="eyebrow">Recorded assets</span>
-            <h2>The page is already prepared for a 3-minute and a 10-minute version.</h2>
+            <span class="eyebrow">Model setup</span>
+            <h2>Configure the active model provider</h2>
             <p>
-              The short version is for the landing page and public posts. It should foreground name persistence,
-              self-reflection, and the felt difference of the system. The longer version is for researchers and labs.
-              It should show field states, coherence movement, identity protection, and architecture explanation in one
-              continuous technical walkthrough.
+              Open <strong>Preferences</strong>, go to <strong>AI Model</strong>, configure the inference source and
+              model settings you want to use, then save and test the active provider before beginning evaluation.
+            </p>
+            <div class="bullet-stack">
+              <div class="bullet-item"><strong>Step 1.</strong> Open <strong>Preferences</strong>.</div>
+              <div class="bullet-item"><strong>Step 2.</strong> Go to <strong>AI Model</strong>.</div>
+              <div class="bullet-item"><strong>Step 3.</strong> Configure provider and model settings.</div>
+              <div class="bullet-item"><strong>Step 4.</strong> Click <strong>Save Model Settings</strong>.</div>
+              <div class="bullet-item"><strong>Step 5.</strong> Click <strong>Test Active Provider</strong>.</div>
+            </div>
+          </section>
+
+          <section class="panel split-panel accent-panel">
+            <span class="eyebrow">Inference modes</span>
+            <div class="bullet-stack">
+              <div class="bullet-item"><strong>Auto (Recommended).</strong> Uses cloud if both API key and model are configured; otherwise falls back to local Ollama.</div>
+              <div class="bullet-item"><strong>Local Ollama.</strong> Uses the configured local Ollama instance only.</div>
+              <div class="bullet-item"><strong>Cloud API.</strong> Uses a configured cloud provider only.</div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <div class="content-grid">
+        <section class="content-block">
+          <h2>Local Ollama setup</h2>
+          <ul class="styled-list">
+            <li>Set <strong>Inference source</strong> to <strong>Local Ollama</strong>, or leave it on <strong>Auto</strong> with no API key configured.</li>
+            <li>Enter the local model name you want to use in the <strong>Model</strong> field.</li>
+            <li>Confirm the local Ollama URL. The default is <strong>http://127.0.0.1:11434</strong>.</li>
+            <li>Click <strong>Refresh Ollama Models</strong>.</li>
+            <li>Click <strong>Save Model Settings</strong>.</li>
+          </ul>
+        </section>
+
+        <section class="content-block">
+          <h2>Cloud provider setup</h2>
+          <ul class="styled-list">
+            <li>Set <strong>Inference source</strong> to <strong>Cloud API</strong>, or use <strong>Auto</strong>.</li>
+            <li>Select the cloud provider.</li>
+            <li>Enter the exact provider model ID in the <strong>Model</strong> field.</li>
+            <li>Paste your key into <strong>API key</strong>.</li>
+            <li>Confirm the correct <strong>API base URL</strong>.</li>
+            <li>Click <strong>Save Model Settings</strong> and then <strong>Test Active Provider</strong>.</li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="section">
+        <div class="panel split-band">
+          <div>
+            <span class="eyebrow">Provider selection logic</span>
+            <h2>How Aura decides what provider to use</h2>
+            <p>
+              Provider selection follows a fixed execution rule. If <strong>Inference source</strong> is set to
+              <strong>Cloud API</strong>, Aura uses cloud only. If it is set to <strong>Local Ollama</strong>,
+              Aura uses local only. If it is set to <strong>Auto</strong>, Aura uses cloud when both an API key
+              and model are present; otherwise it uses local Ollama.
+            </p>
+          </div>
+          <div class="band-stats">
+            <div class="band-stat"><span>Cloud mode</span><strong>Cloud provider only</strong></div>
+            <div class="band-stat"><span>Local mode</span><strong>Ollama only</strong></div>
+            <div class="band-stat"><span>Auto mode</span><strong>Cloud if configured, else local</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading narrow">
+          <span class="eyebrow">Use and support</span>
+          <h2>Logs, troubleshooting, and support workflow</h2>
+        </div>
+
+        <div class="demo-grid two-strong">
+          <section class="demo-block">
+            <div class="kicker">Export logs</div>
+            <h2>Export error logs for support</h2>
+            <p>
+              If the demo encounters an issue, open <strong>Preferences</strong>, go to <strong>Privacy</strong>,
+              then use <strong>Export Logs</strong> under the error log export area. Save the JSON file and include
+              it with the support report.
+            </p>
+            <p>
+              Aura also keeps rolling runtime logs locally at
+              <strong>AppData/Roaming/AuraCoreCF/logs/aura-errors.jsonl</strong> in installed builds.
             </p>
           </section>
-          <section class="panel split-panel accent-panel">
-            <span class="eyebrow">What you plug in later</span>
-            <div class="bullet-stack">
-              <div class="bullet-item"><strong>Video 1:</strong> insert the unlisted 3-minute demo link.</div>
-              <div class="bullet-item"><strong>Video 2:</strong> insert the unlisted 10-minute technical walkthrough.</div>
-              <div class="bullet-item"><strong>Contact path:</strong> add one line for live technical demonstration requests.</div>
-            </div>
+
+          <section class="demo-block">
+            <div class="kicker">Quick troubleshooting</div>
+            <h2>Common issues</h2>
+            <ul class="styled-list">
+              <li><strong>Cannot reach Ollama.</strong> Start Ollama and verify the configured local URL is reachable.</li>
+              <li><strong>Cloud test failed (401/403).</strong> The API key is invalid or missing permissions.</li>
+              <li><strong>Cloud test failed (404).</strong> The API base URL is incorrect for that provider.</li>
+              <li><strong>Model not found.</strong> Verify exact spelling in the <strong>Model</strong> field.</li>
+              <li><strong>Wrong provider still active.</strong> Re-open <strong>AI Model</strong>, confirm <strong>Inference source</strong>, save settings again, and re-test.</li>
+            </ul>
           </section>
         </div>
       </section>
 
       <section class="section">
         <div class="callout strong-callout">
-          <strong>Credibility note.</strong> The strongest demo move is not pretending the system never breaks. It is
-          showing the architecture, explaining the field behavior, and documenting the real failure modes honestly so
-          skeptical viewers can see where the system is strong and where the open problems still are.
+          <strong>Operational note.</strong>
+          This page is intended to serve as the in-house distribution surface for the AuraCoreCF
+          desktop demo. It provides download access, installation guidance, model setup instructions,
+          and support workflow in one place so evaluation can remain self-contained within the site.
         </div>
       </section>
+
     </div>
   </main>
 
@@ -123,7 +255,8 @@
     <div class="container footer-wrap">
       <div>
         <strong>AuraCoreCF</strong>
-        <p>Demonstration framework</p>
+        <p>Desktop demo distribution page</p>
+        <p>© 2026 AuraCoreCF — All rights reserved.</p>
       </div>
       <div class="footer-links">
         <a href="index.html">Home</a>
