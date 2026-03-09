@@ -4,14 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Demo | AuraCoreCF</title>
-  <meta name="description" content="Demo overview and request pathway for AuraCoreCF." />
+  <meta name="description" content="Demo overview for AuraCoreCF." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html">AuraCoreCF</a>
+      <div class="brand-wrap">
+        <div class="brand-mark"></div>
+        <div>
+          <a class="brand" href="index.html">AuraCoreCF</a>
+          <span class="brand-sub">Coherence-Field Systems</span>
+        </div>
+      </div>
       <nav class="nav">
+        <a href="index.html">Home</a>
         <a href="physics.html">Physics</a>
         <a href="aura.html">Architecture</a>
         <a href="papers.html">Papers</a>
@@ -22,45 +29,47 @@
 
   <main class="page-main">
     <div class="container">
-      <div class="page-hero panel">
+      <section class="page-hero">
         <span class="eyebrow">Demonstrations</span>
-        <h1>Technical walkthroughs, recorded demos, and live request framing.</h1>
+        <h1>Technical demos with a cleaner evaluation path.</h1>
         <p>
-          This page is designed to support both non-technical and technical demonstrations,
-          while making the evaluation context clear to outside viewers.
+          This page is meant to frame live or recorded demonstrations of AuraCoreCF in a way that feels serious,
+          technical, and enterprise-ready. Use it to present what the system shows, how to interpret it, and how to request a walkthrough.
         </p>
+      </section>
+
+      <div class="demo-grid">
+        <section class="demo-block">
+          <div class="kicker">Demo format</div>
+          <h2>What to show</h2>
+          <p>Use this section for the sequence: setup context, architecture view, live interaction, coherence output, and interpretation.</p>
+        </section>
+        <section class="demo-block">
+          <div class="kicker">Request path</div>
+          <h2>How others engage</h2>
+          <p>Add a direct email or form link here once you are ready to accept technical demo requests.</p>
+        </section>
       </div>
 
-      <div class="content-grid">
-        <section class="panel content-block">
-          <h2>Recommended demo structure</h2>
-          <ul class="styled-list">
-            <li>Short non-technical introduction</li>
-            <li>Technical walkthrough of architecture or behavior</li>
-            <li>Evidence or metrics framing</li>
-            <li>Known limitations and failure-mode disclosure</li>
-          </ul>
-        </section>
-
-        <section class="panel content-block">
-          <h2>Live demo requests</h2>
-          <p>
-            Add your preferred contact pathway here. Until then, use a short note explaining whether requests are open,
-            limited, or by invitation.
-          </p>
-          <div class="callout">
-            <strong>Placeholder:</strong> Demo requests are currently being structured. Contact details will be added here.
+      <section class="section">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="kicker">01</div>
+            <h3>Environment</h3>
+            <p>Show a controlled setup so the audience understands the system context.</p>
           </div>
-        </section>
-
-        <section class="panel content-block full-width">
-          <h2>What to add next</h2>
-          <p>
-            Add one short demo description, one technical demo description, and direct links to any unlisted videos or hosted materials.
-            You can also include a brief section titled “How to interpret this demo” so viewers understand what they are seeing.
-          </p>
-        </section>
-      </div>
+          <div class="timeline-item">
+            <div class="kicker">02</div>
+            <h3>Architecture exposure</h3>
+            <p>Reveal the relevant structure or metrics before the interaction begins.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="kicker">03</div>
+            <h3>Interpretation</h3>
+            <p>End with what the demo does and does not claim, so the framing remains credible.</p>
+          </div>
+        </div>
+      </section>
     </div>
   </main>
 
@@ -68,7 +77,7 @@
     <div class="container footer-wrap">
       <div>
         <strong>AuraCoreCF</strong>
-        <p>Demo page</p>
+        <p>Demo overview page</p>
       </div>
       <div class="footer-links">
         <a href="index.html">Home</a>
