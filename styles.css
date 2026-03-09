@@ -526,3 +526,21 @@ footer p,
 @media (max-width: 960px) {
   .split-panel-grid, .stack-grid, .split-band, .wide-timeline, .wide-timeline.three-up, .fields-grid, .two-strong { grid-template-columns: 1fr; }
 }
+
+.diagram-panel{
+background:rgba(10,18,38,.82);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:32px;
+box-shadow:var(--shadow-lg),var(--shadow-glow);
+overflow:auto;
+margin-top:28px;
+}
+
+.system-diagram{
+font-family:"Courier New",monospace;
+font-size:14px;
+line-height:1.45;
+color:#b8c5ff;
+white-space:pre;
+}
