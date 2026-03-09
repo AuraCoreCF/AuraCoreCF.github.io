@@ -16,12 +16,10 @@ content="Architecture overview for AuraCoreCF including the cognitive field runt
 <body>
 
 <header class="site-header">
-
 <div class="container nav-wrap">
 
 <div class="brand-wrap">
 <div class="brand-mark"></div>
-
 <div>
 <a class="brand" href="index.html">AuraCoreCF</a>
 <span class="brand-sub">Coherence-Field Systems</span>
@@ -37,7 +35,6 @@ content="Architecture overview for AuraCoreCF including the cognitive field runt
 </nav>
 
 </div>
-
 </header>
 
 
@@ -53,19 +50,101 @@ content="Architecture overview for AuraCoreCF including the cognitive field runt
 <h1>A modular cognitive runtime built around coherence and continuity.</h1>
 
 <p>
-AuraCoreCF organizes cognition as a structured runtime environment rather
-than a simple prompt-to-text pipeline. The system coordinates memory,
-identity, learning, interaction, and security through a central runtime
-kernel so that reasoning remains stateful, auditable, and locally grounded.
+AuraCoreCF implements cognition as a layered runtime architecture rather than
+a simple prompt-response interface. The system coordinates memory, identity,
+learning, security, and interaction through a central runtime kernel so that
+behavior remains local, stateful, and auditable.
 </p>
 
 <p>
-Instead of treating the language model as the core of intelligence, the
-architecture treats the model as a verbalization interface. The deeper
-organization of cognition lives in the surrounding runtime: the cognitive
-field, the continuity system, the identity layer, and the orchestration
-logic that governs how information moves through the stack.
+Within this architecture the language model functions as a verbalization
+interface rather than the primary reasoning engine. The deeper cognitive
+organization is maintained by the runtime environment that manages fields,
+memory, identity, and protection boundaries.
 </p>
+
+</section>
+
+
+
+<section class="section">
+
+<div class="section-heading narrow">
+<span class="eyebrow">System overview</span>
+<h2>A layered runtime architecture</h2>
+
+<p>
+Requests enter the system through the interface layer and move through a
+strictly ordered pipeline. Security validation occurs before any reasoning
+stage, memory and identity state are incorporated during field activation,
+and the language model is invoked only at the final stage of expression.
+</p>
+
+</div>
+
+<div class="diagram-panel">
+
+<pre class="system-diagram">
+
+User Interaction
+      │
+      ▼
+┌──────────────────────────────────────────────┐
+│                 UI Layer                     │
+│  Application shell · conversation interface │
+└──────────────────────────────────────────────┘
+      │
+      ▼
+┌──────────────────────────────────────────────┐
+│               Runtime Layer                  │
+│        AuraKernel · AuraRuntime              │
+│        SubsystemRegistry · AuraClock         │
+└──────────────────────────────────────────────┘
+      │
+      ▼
+┌──────────────────────────────────────────────┐
+│              Cognitive Layer                 │
+│        CognitiveFieldRuntime (7 fields)      │
+│  Attention · Meaning · Goal · Trust · Skill  │
+│           Context · Identity                 │
+└──────────────────────────────────────────────┘
+      │
+      ▼
+┌──────────────────────────────────────────────┐
+│         Temporal Continuity System           │
+│  EpisodeBuilder · ContinuityVault · Salience │
+└──────────────────────────────────────────────┘
+      │
+      ▼
+┌──────────────────────────────────────────────┐
+│               Memory Layer                   │
+│   MemoryManager · HybridMemory · Recall     │
+└──────────────────────────────────────────────┘
+      │
+      ▼
+┌──────────────────────────────────────────────┐
+│               Identity Layer                 │
+│  IdentityCore · RoleContext · TrustProfile  │
+└──────────────────────────────────────────────┘
+      │
+      ▼
+┌──────────────────────────────────────────────┐
+│          Tool / Middleware Layer             │
+│  ToolBridge · CapabilityAdapters · Router   │
+└──────────────────────────────────────────────┘
+      │
+      ▼
+┌──────────────────────────────────────────────┐
+│              Security Layer                  │
+│ ThreatDetection · AxiomKernel · SandboxExec │
+└──────────────────────────────────────────────┘
+      │
+      ▼
+Language model (verbalization interface)
+
+</pre>
+
+</div>
 
 </section>
 
@@ -77,37 +156,37 @@ logic that governs how information moves through the stack.
 
 <article class="mini-card">
 <span>ATTENTION</span>
-<p>What the system is actively orienting around in the current interaction.</p>
+<p>Current focus of the system during interaction.</p>
 </article>
 
 <article class="mini-card">
 <span>MEANING</span>
-<p>The interpretive center determining how incoming information is understood.</p>
+<p>Interpretive layer shaping how incoming information is understood.</p>
 </article>
 
 <article class="mini-card">
 <span>GOAL</span>
-<p>The active objective shaping reasoning and response formation.</p>
+<p>Active objective guiding reasoning and response construction.</p>
 </article>
 
 <article class="mini-card">
 <span>TRUST</span>
-<p>The relational and risk layer guiding how the system evaluates input.</p>
+<p>Confidence and relational context influencing interaction.</p>
 </article>
 
 <article class="mini-card">
 <span>SKILL</span>
-<p>The capability or operational mode currently being engaged.</p>
+<p>Capability or operational mode currently engaged.</p>
 </article>
 
 <article class="mini-card">
 <span>CONTEXT</span>
-<p>The broader frame binding session content to ongoing continuity.</p>
+<p>Session frame linking interaction to prior continuity.</p>
 </article>
 
 <article class="mini-card">
 <span>IDENTITY</span>
-<p>The stabilizing layer preserving self-consistency across interactions.</p>
+<p>Stabilizing layer preserving coherent system behavior.</p>
 </article>
 
 </div>
@@ -123,20 +202,10 @@ logic that governs how information moves through the stack.
 <h2>Runtime orchestration</h2>
 
 <p>
-At the center of the system is the AuraKernel and AuraRuntime. These
-components manage subsystem lifecycle, coordinate message flow, and
-maintain the global state required for persistent cognition. A subsystem
-registry allows specialized modules—memory, identity, security, and
-interaction—to register themselves and operate under a unified runtime
-clock.
-</p>
-
-<p>
-Incoming messages enter through the interface layer and are routed through
-security checks before they reach the cognitive field. The runtime then
-activates the field, updates internal state, constructs a structured
-payload, and finally invokes the language model only as the last step of
-expression.
+AuraKernel coordinates subsystem lifecycle and message flow across the
+runtime environment. Each subsystem registers with the runtime and
+operates under a shared system clock so state transitions remain
+consistent and observable.
 </p>
 
 </section>
@@ -145,21 +214,12 @@ expression.
 
 <section class="content-block">
 
-<h2>Cognitive field runtime</h2>
+<h2>Cognitive field processing</h2>
 
 <p>
-The CognitiveFieldRuntime maintains the seven interacting fields that
-define Aura’s internal reasoning environment. Field propagation,
-stabilization, and cross-field influence determine how the system
-interprets new input and updates its internal state.
-</p>
-
-<p>
-Each field represents a functional dimension of cognition rather than a
-single hidden variable. The interaction between these fields forms the
-dynamic environment in which reasoning occurs. Changes in attention,
-identity pressure, or contextual relevance propagate through the field
-before any response is generated.
+Cognition occurs through the interaction of seven fields that propagate
+state changes across the reasoning environment. Field updates determine
+how new information is interpreted before a response is generated.
 </p>
 
 </section>
@@ -168,20 +228,13 @@ before any response is generated.
 
 <section class="content-block">
 
-<h2>Temporal continuity system</h2>
+<h2>Memory integration</h2>
 
 <p>
-The Temporal Continuity Field manages persistent experience across
-interactions. EpisodeBuilder constructs structured memory entries,
-while the ContinuityVault stores encrypted continuity records that allow
-the system to maintain identity and context over time.
-</p>
-
-<p>
-Salience compression and relevance filtering determine what becomes part
-of the long-term narrative of the system’s experience. This continuity
-layer ensures that cognition evolves as a sequence of connected states
-rather than isolated responses.
+MemoryManager coordinates a hybrid memory model combining episodic,
+semantic, and procedural recall. Retrieval occurs through contextual
+matching against the current field state rather than replaying raw
+conversation transcripts.
 </p>
 
 </section>
@@ -190,40 +243,12 @@ rather than isolated responses.
 
 <section class="content-block">
 
-<h2>Memory architecture</h2>
+<h2>Identity stabilization</h2>
 
 <p>
-MemoryManager coordinates a hybrid memory system combining short-term
-context, semantic knowledge, procedural capability references, and
-structured episodic recall. Retrieval is handled by the RecallEngine,
-which selects relevant memories based on current field state.
-</p>
-
-<p>
-Rather than replaying chat history verbatim, memory is integrated through
-structured retrieval so that prior knowledge informs the present reasoning
-environment without collapsing the system into transcript-based behavior.
-</p>
-
-</section>
-
-
-
-<section class="content-block">
-
-<h2>Identity and relationship model</h2>
-
-<p>
-IdentityCore maintains the system’s internal self-model. RoleContext,
-TrustProfile, and RelationshipModel cooperate with the ContinuityManager
-to preserve stable identity across interactions and sessions.
-</p>
-
-<p>
-This layer prevents the system from drifting into arbitrary roles or
-contradictory states when exposed to adversarial prompts or shifting
-contexts. Identity is treated as an architectural invariant rather than
-a temporary conversational setting.
+IdentityCore maintains a stable self-model across interactions. Role
+context, trust relationships, and continuity records allow the system
+to maintain consistent behavior even under adversarial prompting.
 </p>
 
 </section>
@@ -232,64 +257,18 @@ a temporary conversational setting.
 
 <section class="content-block full-width">
 
-<h2>Tool and environment integration</h2>
+<h2>Security-first execution order</h2>
 
 <p>
-External actions are routed through a proposal-based tooling layer.
-Requests pass through the AuraToolInterface, where proposals are evaluated
-before execution. The ToolBridge and PermissionMapper ensure that actions
-are authorized, logged, and auditable before they affect external systems.
-</p>
-
-<p>
-Capability adapters and event routers allow the architecture to interact
-with external environments while maintaining a clear boundary between the
-core cognitive runtime and external execution environments.
+All requests pass through the security subsystem before reaching the
+reasoning environment. Threat analysis, axiom constraints, and execution
+sandboxing ensure that unsafe or contradictory instructions cannot
+bypass structural protections.
 </p>
 
 </section>
 
-
-
-<section class="content-block full-width">
-
-<h2>Security-first processing</h2>
-
-<p>
-Before any request reaches the language model, it passes through the
-SecuritySubsystem. Threat detection, the AxiomKernel, and the
-NonCoercionGuard analyze incoming input for violations of structural
-constraints or attempts to destabilize system identity.
-</p>
-
-<p>
-If a violation is detected, the request is halted before entering the
-expression pipeline. This ordering ensures that unsafe or contradictory
-instructions never reach the model layer.
-</p>
-
-</section>
-
-
-
-<section class="content-block full-width">
-
-<h2>Expression pipeline</h2>
-
-<p>
-Once internal state has been updated, MeaningPayloadBuilder constructs
-a structured payload describing the system’s current field state,
-identity context, memory retrievals, and tool availability.
-</p>
-
-<p>
-ExpressionGenerator then transforms this structured state into natural
-language through the local language model. The model functions strictly
-as a verbalization layer, converting the internal reasoning environment
-into a human-readable response.
-</p>
-
-</section>
+</div>
 
 
 
@@ -304,15 +283,14 @@ into a human-readable response.
 <h2>Identity protection is structural.</h2>
 
 <p>
-AuraCoreCF treats adversarial prompts as pressure applied to the cognitive
-field. When prompts attempt to force contradiction, coercion, or role
-collapse, coherence metrics drop and protection systems activate.
+AuraCoreCF treats adversarial prompts as pressure applied to the
+cognitive field. When prompts attempt to induce contradiction or role
+collapse, coherence signals drop and protection mechanisms activate.
 </p>
 
 <p>
-Rather than responding with generic refusals, the architecture maintains
-internal consistency by stabilizing the identity field and preserving the
-constraints that define the system’s reasoning environment.
+Instead of relying on surface filtering, the architecture preserves
+internal consistency by maintaining identity and field stability.
 </p>
 
 </div>
@@ -355,43 +333,23 @@ constraints that define the system’s reasoning environment.
 <div class="feature-list three-col">
 
 <div class="feature-item">
-
 <h3>For researchers</h3>
-
-<p>
-It provides a framework for discussing cognition as a structured system
-rather than an opaque neural model.
-</p>
-
+<p>A concrete model for discussing stateful cognition and coherence-driven reasoning.</p>
 </div>
 
 <div class="feature-item">
-
 <h3>For engineers</h3>
-
-<p>
-The system decomposes reasoning into modular components that can be
-tested, audited, and improved independently.
-</p>
-
+<p>A modular system where runtime components can be audited and improved independently.</p>
 </div>
 
 <div class="feature-item">
-
 <h3>For the public record</h3>
-
-<p>
-The architecture connects the physics framework, the technical papers,
-and the working demonstrations into a coherent research program.
-</p>
-
+<p>A coherent presentation linking physics research, architecture design, and demonstrations.</p>
 </div>
 
 </div>
 
 </section>
-
-
 
 </div>
 
