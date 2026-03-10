@@ -911,3 +911,20 @@ footer p,
     padding: 24px;
   }
 }
+
+.footer-note{
+  margin-top:10px;
+  color:var(--muted-2);
+  font-size:.92rem;
+  line-height:1.5;
+}
+
+.footer-note a{
+  color:#d6e4ff;
+  text-decoration:none;
+  font-weight:700;
+}
+
+.footer-note a:hover{
+  color:var(--text);
+}
