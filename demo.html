@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Demo | AuraCoreCF</title>
-  <meta name="description" content="Download and setup page for the AuraCoreCF desktop demo, including supported systems, installation, model configuration, usage guidance, and troubleshooting." />
+  <meta name="description" content="Download and setup page for the AuraCoreCF desktop demo, including supported systems, installation, model configuration, usage guidance, known limitations, and troubleshooting." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -34,16 +34,47 @@
         <span class="eyebrow">Desktop Demo</span>
         <h1>Download, install, and run AuraCoreCF locally.</h1>
         <p>
-          This page is the distribution and setup surface for the AuraCoreCF desktop demo.
-          It is designed for evaluators, testers, and technical reviewers who need a direct
-          way to install the application, configure a model provider, and run the system in
-          a controlled local environment.
+          This page serves as the distribution and setup surface for the AuraCoreCF desktop demo.
+          It is designed for evaluators, testers, and technical reviewers who need a direct way to
+          install the application, configure inference, and operate the system in a controlled local
+          environment.
         </p>
         <p>
-          AuraCoreCF is a local-first desktop application. It can run with a local model
-          through Ollama or with a cloud model through a supported API provider, depending
-          on how model settings are configured after installation.
+          AuraCoreCF is a local-first desktop application. It can run with a local model through
+          Ollama or with a cloud model through a supported API provider, depending on how model
+          settings are configured after installation.
         </p>
+      </section>
+
+      <section class="section">
+        <div class="section-heading narrow">
+          <span class="eyebrow">Experimental System Notice</span>
+          <h2>This is an evaluation build.</h2>
+        </div>
+
+        <div class="callout strong-callout">
+          <strong>Important notice.</strong>
+
+          The AuraCoreCF desktop package distributed on this page is a demonstration build intended
+          for evaluation, testing, and research review. It exposes the core runtime environment of
+          the system but should not be considered a finalized production release.
+
+          Because this build is provided for demonstration purposes, some features may be incomplete,
+          unstable, or behave differently across environments. Certain capabilities are still under
+          active development and may change between versions.
+
+          Voice interaction is currently experimental and may fail to initialize, disconnect
+          unexpectedly, or behave inconsistently depending on system configuration and audio device
+          support.
+
+          Aura is also designed to evolve through interaction. Early sessions may appear less
+          capable because the system has not yet accumulated contextual memory, trust signals, or
+          continuity records. As interaction continues, the system’s internal state grows and
+          responses become more consistent with the user’s patterns and context.
+
+          Testers should therefore expect occasional errors, configuration issues, or unexpected
+          behaviors while evaluating the demo.
+        </div>
       </section>
 
       <section class="section">
@@ -52,44 +83,13 @@
             <span class="eyebrow">Download package</span>
             <h2>Get the Windows demo build.</h2>
             <p>
-              Download the current desktop package, extract it locally, and launch the
-              application from the unzipped folder. This distribution page is intended to
-              keep demo delivery, installation guidance, and usage instructions contained
-              entirely within the AuraCoreCF site.
+              Download the current desktop package, extract it locally, and launch the application
+              from the unzipped folder. This page is intended to keep demo delivery, installation
+              guidance, and usage instructions contained entirely within the AuraCoreCF site.
             </p>
             <div class="hero-actions">
               <a class="button button-primary" href="downloads/auracorecf-demo-package.zip" download>Download demo package</a>
             </div>
-          <section class="section">
-
-<div class="callout strong-callout">
-
-<strong>Demo notice.</strong>
-
-The AuraCoreCF desktop package distributed on this page is a demonstration
-build intended for evaluation and testing. It exposes the core runtime and
-interaction surface of the system but should not be considered a finalized
-production release.
-
-Because this build is provided for demonstration purposes, some features may
-be incomplete, unstable, or behave differently across environments. Certain
-capabilities are still under active development. For example, voice interaction
-is currently experimental and may fail to initialize or function reliably on
-some systems.
-
-Aura is also designed to improve through continued interaction. Early sessions
-may feel less capable because the system has not yet accumulated contextual
-memory, trust signals, or continuity records. As interaction continues, the
-system's internal state evolves and responses become more consistent with the
-user's patterns and context.
-
-Testers should therefore expect occasional errors, incomplete behaviors, or
-configuration issues while evaluating the demo.
-
-</div>
-
-</section>
-            
           </section>
 
           <section class="panel split-panel accent-panel">
@@ -98,8 +98,64 @@ configuration issues while evaluating the demo.
               <div class="bullet-item"><strong>Supported platform.</strong> Windows 10 and Windows 11.</div>
               <div class="bullet-item"><strong>Supported architectures.</strong> x64 and arm64.</div>
               <div class="bullet-item"><strong>Not currently shipped.</strong> macOS and Linux demo packages are not currently provided.</div>
-              <div class="bullet-item"><strong>Build scope.</strong> The wider project includes cross-platform components, but this demo package and setup flow are tuned for Windows.</div>
+              <div class="bullet-item"><strong>Build scope.</strong> The broader project includes cross-platform pieces, but this demo package and setup flow are tuned for Windows.</div>
               <div class="bullet-item"><strong>Windows-specific integration.</strong> Some integrations in this build are Windows-specific, including portions of authentication wiring and local service bootstrap behavior.</div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="split-panel-grid">
+          <section class="panel split-panel">
+            <span class="eyebrow">Known limitations</span>
+            <h2>Current demo constraints</h2>
+            <div class="bullet-stack">
+              <div class="bullet-item">
+                <strong>Voice interaction.</strong>
+                Voice support is experimental and may not function reliably on all systems. Audio
+                device differences and driver behavior may affect initialization.
+              </div>
+              <div class="bullet-item">
+                <strong>Model variability.</strong>
+                Behavior may differ significantly depending on the selected model and provider
+                configuration.
+              </div>
+              <div class="bullet-item">
+                <strong>Local environment differences.</strong>
+                Hardware configuration, OS services, and local model availability may affect
+                runtime behavior.
+              </div>
+              <div class="bullet-item">
+                <strong>Feature completeness.</strong>
+                Some subsystems present in the architecture may not be fully exposed in this demo
+                build.
+              </div>
+            </div>
+          </section>
+
+          <section class="panel split-panel accent-panel">
+            <span class="eyebrow">Evaluation goals</span>
+            <h2>What testers should evaluate</h2>
+            <div class="bullet-stack">
+              <div class="bullet-item">
+                <strong>System behavior.</strong>
+                Evaluate how Aura responds across longer interactions rather than single prompt
+                exchanges.
+              </div>
+              <div class="bullet-item">
+                <strong>Context continuity.</strong>
+                Observe how the system maintains coherence across multiple turns and topics.
+              </div>
+              <div class="bullet-item">
+                <strong>Model configuration.</strong>
+                Test both local Ollama models and cloud providers to compare runtime behavior.
+              </div>
+              <div class="bullet-item">
+                <strong>Stability.</strong>
+                Identify configuration issues, runtime errors, or edge cases encountered during
+                extended sessions.
+              </div>
             </div>
           </section>
         </div>
@@ -109,10 +165,9 @@ configuration issues while evaluating the demo.
         <section class="content-block">
           <h2>What the demo is</h2>
           <p>
-            The desktop demo provides a direct way to evaluate AuraCoreCF as an application
-            rather than as a static description. It exposes the runtime surface needed to
-            install the system, configure inference, and operate the application in a local
-            environment.
+            The desktop demo provides a direct way to evaluate AuraCoreCF as an application rather
+            than as a static description. It exposes the runtime surface needed to install the
+            system, configure inference, and operate the application in a local environment.
           </p>
           <p>
             The demo supports both local and cloud inference paths so the application can be
@@ -123,13 +178,13 @@ configuration issues while evaluating the demo.
         <section class="content-block">
           <h2>Default model behavior</h2>
           <p>
-            If model settings are left empty, Aura defaults to a local Ollama workflow using
-            the model <strong>deepseek-r1:latest</strong>. This allows the demo to fall back
-            to a local-first configuration without requiring a cloud provider.
+            If model settings are left empty, Aura defaults to a local Ollama workflow using the
+            model <strong>deepseek-r1:latest</strong>. This allows the demo to fall back to a
+            local-first configuration without requiring a cloud provider.
           </p>
           <p>
-            Users can override this behavior at any time by opening model settings and
-            configuring either a local Ollama model or a cloud API provider.
+            Users can override this behavior at any time by opening model settings and configuring
+            either a local Ollama model or a cloud API provider.
           </p>
         </section>
       </div>
@@ -198,7 +253,7 @@ configuration issues while evaluating the demo.
           <h2>Local Ollama setup</h2>
           <ul class="styled-list">
             <li>Set <strong>Inference source</strong> to <strong>Local Ollama</strong>, or leave it on <strong>Auto</strong> with no API key configured.</li>
-            <li>In <strong>Model</strong>, enter the local model you want to run, for example <strong>deepseek-r1:latest</strong>.</li>
+            <li>In <strong>Model</strong>, enter your local model name, for example <strong>deepseek-r1:latest</strong>.</li>
             <li>In <strong>Local Ollama</strong>, confirm the URL. The default is <strong>http://127.0.0.1:11434</strong>.</li>
             <li>Click <strong>Refresh Ollama Models</strong>.</li>
             <li>Click <strong>Save Model Settings</strong>.</li>
@@ -318,8 +373,8 @@ configuration issues while evaluating the demo.
             <p>
               This page is intended to serve as the in-house distribution surface for the
               AuraCoreCF desktop demo. It combines download access, supported system guidance,
-              installation instructions, model setup, and support workflow in one place so
-              evaluation remains self-contained within the site.
+              installation instructions, model setup, known limitations, and support workflow
+              in one place so evaluation remains self-contained within the site.
             </p>
           </section>
         </div>
